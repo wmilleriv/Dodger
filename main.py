@@ -26,7 +26,7 @@ pygame.display.set_caption("Game")
 class Enemy(pygame.sprite.Sprite):
       def __init__(self):
         super().__init__() 
-        self.image = pygame.image.load("Enemy.png")
+        self.image = pygame.image.load("./assets/Enemy.png")
         self.rect = self.image.get_rect()
         self.rect.center=(random.randint(40,SCREEN_WIDTH-40),0) 
  
@@ -43,7 +43,7 @@ class Enemy(pygame.sprite.Sprite):
 class Player(pygame.sprite.Sprite):
     def __init__(self):
         super().__init__() 
-        self.image = pygame.image.load("Player.png")
+        self.image = pygame.image.load("./assets/Player.png")
         self.rect = self.image.get_rect()
         self.rect.center = (160, 520)
  
