@@ -67,6 +67,15 @@ class Player(pygame.sprite.Sprite):
          
 P1 = Player()
 E1 = Enemy()
+
+enemies = pygame.sprite.Group()
+enemies.add(E1)
+all_sprites = pygame.sprite.Group()
+all_sprites.add(P1)
+all_sprites.add(E1)
+
+INC_SPEED = pygame.USEREVENT+1
+pygame.time.set_timer(INC_SPEED, 1000)
  
 while True:     
     for event in pygame.event.get():              
